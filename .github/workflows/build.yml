@@ -30,16 +30,16 @@ jobs:
       - name: Build executable
         run: |
           # Use a tool like PyInstaller to build the executable
-          pyinstaller --onefile your_script.py
+          pyinstaller --onefile newultimatesleepingsimulator.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: executable-${{ matrix.platform }}
-          path: dist/your_script
+          path: dist/newultimatesleepingsimulator
 
       - name: Upload release asset
         uses: actions/upload-artifact@v3
         with:
           name: your_script-${{ matrix.platform }}.exe
-          path: dist/your_script
+          path: dist/newultimatesleepingsimulator
